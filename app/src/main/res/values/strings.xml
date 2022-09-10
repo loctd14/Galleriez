@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Galleriez</string>
+    <string name="text_album">Thư viện</string>
+    <string name="text_favorite">Yêu thích</string>
+    <string name="text_grant_access">Cấp quyền</string>
+
+    <string name="msg_welcome">Galleriez xin chào bạn</string>
+    <string name="msg_greetings">Vui lòng cho phép ứng dụng quyền truy cập vào Thư viện Ảnh của bạn trước khi sử dụng</string>
+</resources>

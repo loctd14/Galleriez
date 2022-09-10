@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Galleriez</string>
+    <string name="text_album">Gallery</string>
+    <string name="text_favorite">Favorite</string>
+    <string name="text_grant_access">Grant access</string>
+
+    <string name="msg_welcome">Welcome to Galleriez</string>
+    <string name="msg_greetings">Please grant access to your Gallery so you can start browsing your amazing photos and videos</string>
+</resources>

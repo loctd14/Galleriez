@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_vertical_50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".50" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageview_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Space
+        android:id="@+id/space_dummy"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_gallery"
+        android:layout_width="125dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/space_dummy"
+        app:layout_constraintEnd_toStartOf="@+id/gl_vertical_50"
+        app:layout_constraintStart_toStartOf="@+id/space_dummy"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkbox_photo"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_photo_state"
+            android:button="@null"
+            android:clickable="false"
+            android:focusable="false"
+            android:minWidth="0dp"
+            android:minHeight="0dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/inter_semi_bold"
+        android:text="@string/text_album"
+        android:textColor="@color/py_gray_02"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/card_view_gallery"
+        app:layout_constraintStart_toStartOf="@+id/card_view_gallery"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_gallery" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_favorite"
+        android:layout_width="125dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/space_dummy"
+        app:layout_constraintEnd_toEndOf="@+id/space_dummy"
+        app:layout_constraintStart_toStartOf="@+id/gl_vertical_50"
+        app:layout_constraintTop_toTopOf="@+id/imageview_banner">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkbox_favorite"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_favorite_state"
+            android:button="@null"
+            android:clickable="false"
+            android:focusable="false"
+            android:minWidth="0dp"
+            android:minHeight="0dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/inter_semi_bold"
+        android:text="@string/text_favorite"
+        android:textColor="@color/py_gray_02"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/card_view_favorite"
+        app:layout_constraintStart_toStartOf="@+id/card_view_favorite"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_favorite" />
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/CardViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/space_dummy">
+
+        <LinearLayout
+            android:id="@+id/linear_layout_permission"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_gallery"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/msg_welcome"
+                android:textSize="16sp"
+                android:padding="8dp"
+                android:textColor="@color/py_gray_01"
+                android:fontFamily="@font/inter_semi_bold"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:textColor="@color/py_gray_02"
+                android:text="@string/msg_greetings"
+                android:fontFamily="@font/inter_regular"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/py_gray_05">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_grant_access"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textAllCaps="false"
+                    android:stateListAnimator="@null"
+                    android:textColor="@color/py_gray_01"
+                    android:fontFamily="@font/inter_semi_bold"
+                    android:text="@string/text_grant_access"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
