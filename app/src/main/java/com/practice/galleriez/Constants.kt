@@ -13,10 +13,19 @@ object Constants {
 
     const val MEDIA_EXTRA = "media_extra"
 
+    /**
+     * Visible threshold before signaling another load more
+     */
     const val MIN_THRESHOLD = 10
 
-    const val MAX_THRESHOLD = 100
+    /**
+     * Change this value to increase/decrease the maximum number of media that can be displayed
+     */
+    const val MAX_THRESHOLD = 500
 
+    /**
+     * Number of media that can be loaded at a time
+     */
     const val PAGE_SIZE = 10
 
     const val SEPARATOR = "*/*"
